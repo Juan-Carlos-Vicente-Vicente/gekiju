@@ -1,0 +1,39 @@
+<div id="cajalogin" [style.display]="loging == 'false' ? 'visible': 'none'">
+    <form #logForm="ngForm">
+        <label>Usuario:</label>
+        <input type="text" for="cajanombre" name="cajanombre" #cajanombre
+            title="Introducir un nombre de usuario valido" />
+        <hr />
+        <label>Password:</label>
+        <input type="text" for="cajapass" name="cajapass" #cajapass title="Contraseña de usuario validado" />
+        <!-- value="S2VTournament" -->
+        <!-- value="sogetispain" -->
+        <hr />
+        <button type="button" (click)="mostrarLogin()" class="btn btn-success">
+            Login
+        </button>
+    </form>
+</div>
+
+<!-- <img src="./../../../assets/img/marcotabletvacio.png" width="100%" height="500px" /> -->
+<div class="img-fluid" style="background-image: url(./../../../assets/img/marcotabletvacio.png);">
+
+    <div *ngFor="let usuario of usuarios">
+        <legend><b>{{usuario.identity.name}}</b></legend>
+        <label>
+            <h4>Apellidos</h4>
+        </label>
+        <p>{{usuario.identity.firstname}}</p>
+        <p>{{usuario.identity.secondname}}</p>
+        <div style="float:none; width:100%;">
+            <div style="float: right;">
+                Genero: {{usuario.identity.sex}}
+            </div>
+            <div style="float: left;">
+                Genero: {{usuario.identity.dateofbirth}}
+            </div>
+        </div>
+        <div style="height: 50px;background-color: gray;"></div><br />
+    </div>
+
+</div>
