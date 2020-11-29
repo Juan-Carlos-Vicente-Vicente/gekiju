@@ -1,19 +1,26 @@
-<div id="cajalogin" [style.display]="loging == 'false' ? 'visible': 'none'">
-    <form #logForm="ngForm">
-        <label>Usuario:</label>
-        <input type="text" for="cajanombre" name="cajanombre" #cajanombre
-            title="Introducir un nombre de usuario valido" />
-        <hr />
-        <label>Password:</label>
-        <input type="text" for="cajapass" name="cajapass" #cajapass title="Contraseña de usuario validado" />
-        <!-- value="S2VTournament" -->
-        <!-- value="sogetispain" -->
-        <hr />
-        <button type="button" (click)="mostrarLogin()" class="btn btn-success">
-            Login
-        </button>
-    </form>
-</div>
+<div style="background-image:url('./../../../assets/img/marcotabletvacio.png');
+background-repeat: no-repeat; background-size: contain; background-position: center;">
+    <div id="cajalogin" style="padding: 9em;" [style.display]="loging == 'false' ? 'visible': 'none'">
+        <form #logForm="ngForm" style="margin-left: 40%;">
+            <label>Usuario:</label>
+            <input type="text" for="cajanombre" name="cajanombre" #cajanombre
+                title="Introducir un nombre de usuario valido" />
+            <hr />
+            <label>Password:</label>
+            <input type="text" for="cajapass" name="cajapass" #cajapass title="Contraseña de usuario validado" />
+            <!-- value="S2VTournament" -->
+            <!-- value="sogetispain" -->
+            <hr />
+            <button type="button" (click)="mostrarLogin()" class="btn btn-success">
+                Login
+            </button>
+        </form>
+    </div>
+    <div style="background-color: red;color: white; width: 60%; margin-left: 10%;">
+        {{errorNombre}}
+    </div>
+
+    <!-- 
 <div *ngFor="let usuario of usuarios">
     <legend><b>{{usuario.identity.name}}</b></legend>
     <label>
@@ -30,4 +37,7 @@
         </div>
     </div>
     <div style="height: 50px;background-color: gray;"></div><br />
+</div>
+ -->
+
 </div>

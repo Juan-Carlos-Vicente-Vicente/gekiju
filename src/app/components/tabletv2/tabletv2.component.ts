@@ -14,7 +14,9 @@ export class Tabletv2Component implements OnInit {
   public nom: String;
   public pass: String;
   public loging: String;
+  public datos: String;
   public usuarios: Array<any>;
+  public errorNombre: String;
   constructor(private _service: SogetiService) {
     this.loging = "false";
   }
@@ -24,20 +26,25 @@ export class Tabletv2Component implements OnInit {
     this.pass = this.cajapass.nativeElement.value;
 
     if (this.cajanombre.nativeElement.value == "" && this.loging == "false") {
-      console.log("Nombre vacio.");
+      //Se comprueba si el nombre esta vacio o si no se ha logeado
       this.usuarios = [];
+      this.errorNombre = "Nombre vacio";
     } else {
-      console.log(this.nom + " - " + this.pass);
+      //Se comprueba si el nombre es correcto
       if (this.nom == "S2VTournament" && this.pass == "sogetispain") {
         this.loging = "true";
         this.mostrarEmpleados();
-        console.log(this.loging);
+        this.errorNombre = "";
 
       } else {
-        console.log("Contraseña incorrecto");
+        this.errorNombre = "User/Password Incorrecta";
 
       }
     }
+  }
+
+  busquedaEmpleados() {
+
   }
 
   mostrarEmpleados() {
