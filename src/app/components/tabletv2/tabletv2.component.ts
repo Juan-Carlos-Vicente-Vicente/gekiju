@@ -38,7 +38,6 @@ export class Tabletv2Component implements OnInit {
 
       } else {
         this.errorNombre = "User/Password Incorrecta";
-
       }
     }
   }
