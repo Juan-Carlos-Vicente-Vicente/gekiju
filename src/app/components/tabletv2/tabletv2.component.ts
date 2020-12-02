@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { SogetiService } from 'src/app/services/sogeti.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class Tabletv2Component implements OnInit {
   public datos: String;
   public usuarios: Array<any>;
   public errorNombre: String;
-  constructor(private _service: SogetiService) {
+  constructor(private _service: SogetiService
+    , private _router: Router) {
     this.loging = "false";
   }
 
@@ -25,7 +27,7 @@ export class Tabletv2Component implements OnInit {
     this.nom = this.cajanombre.nativeElement.value;
     this.pass = this.cajapass.nativeElement.value;
 
-    if (this.cajanombre.nativeElement.value == "" && this.loging == "false") {
+    if (this.nom == "" && this.loging == "false") {
       //Se comprueba si el nombre esta vacio o si no se ha logeado
       this.usuarios = [];
       this.errorNombre = "Nombre vacio";
@@ -33,8 +35,10 @@ export class Tabletv2Component implements OnInit {
       //Se comprueba si el nombre es correcto
       if (this.nom == "S2VTournament" && this.pass == "sogetispain") {
         this.loging = "true";
-        this.mostrarEmpleados();
+        //this.mostrarEmpleados();
+        this._router.navigate(["/datosv2"]);
         this.errorNombre = "";
+        console.log("boton pulsado");
 
       } else {
         this.errorNombre = "User/Password Incorrecta";
@@ -42,13 +46,10 @@ export class Tabletv2Component implements OnInit {
     }
   }
 
-  busquedaEmpleados() {
-
-  }
-
   mostrarEmpleados() {
     this._service.verUsuariosSogeti().subscribe(response => {
       this.usuarios = response;
+      console.log(this.usuarios)
     })
   }
 

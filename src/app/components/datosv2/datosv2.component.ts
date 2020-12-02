@@ -11,15 +11,7 @@ export class Datosv2Component implements OnInit {
 
   public usuarios: Array<any>;
   constructor(private _service: SogetiService) {
-    anime({
-      targets: ['.svg-attributes-demo polygon', 'feTurbulence', 'feDisplacementMap'],
-      points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
-      baseFrequency: 0,
-      scale: 1,
-      loop: true,
-      direction: 'alternate',
-      easing: 'easeInOutExpo'
-    });
+
   }
 
   mostrarEmpleados() {
@@ -40,7 +32,7 @@ export class Datosv2Component implements OnInit {
         duration: 2250,
         delay: (el, i) => 150 * (i + 1)
       }).add({
-        targets: '.ml3',
+        targets: '',
         opacity: 0,
         duration: 1000,
         easing: "easeOutExpo",

@@ -1,0 +1,56 @@
+<!-- <div *ngFor="let usuario of usuarios">
+
+
+    <svg id="svg-attributes-demo" height="210" width="500">
+        <polygon points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"
+            style="fill:lime;stroke:purple;stroke-width:1" />
+    </svg>
+    <svg id="polygon" height="210" width="500">
+        <polygon points="64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96"
+            style="fill:lime;stroke:purple;stroke-width:1" />
+    </svg>
+    <h1 class="c2">
+        <span class="word">{{usuario.identity.firstname}}</span>
+        <span class="word">{{usuario.identity.secondname}}</span>
+    </h1>
+</div> -->
+<div style="background-image:url('./../../../assets/img/marcotabletvacio.png');
+background-repeat: no-repeat; background-size: contain; background-position: center;">
+
+    <div class="blanco">
+        <table>
+            <!-- class="table table-dark" -->
+
+            <div *ngFor="let usuario of usuarios">
+                <thead>
+                    <tr>
+                        <th class="bordeceldalados">Nombre</th>
+                        <th class="bordeceldalados">Apellido</th>
+                        <th class="bordeceldalados">Genero</th>
+                        <th class="bordeceldalados">Fecha de nacimiento</th>
+                        <th class="bordeceldalados">Altura</th>
+                        <th class="bordeceldalados">Trabajo</th>
+                        <th class="bordeceldalados">Puesto de trabajo</th>
+                        <th class="bordeceldalados">Dinero en el banco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bordecelda">{{usuario.identity.firstname}}</td>
+                        <td class="bordecelda">{{usuario.identity.secondname}}</td>
+                        <td class="bordecelda">
+                            {{usuario.identity.sex}}
+                        </td>
+                        <td class="bordecelda">{{usuario.identity.dateofbirth}}</td>
+                        <td class="bordecelda">{{usuario.identity.height}} cm</td>
+                        <td class="bordecelda">{{usuario.job}}</td>
+                        <td class="bordecelda">{{usuario.job_grade}}</td>
+                        <td class="bordecelda">{{usuario.bank_money}} €</td>
+
+                    </tr>
+                </tbody>
+                <div class="espaciodivs"></div>
+            </div>
+        </table>
+    </div>
+</div>

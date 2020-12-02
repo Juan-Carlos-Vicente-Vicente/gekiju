@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { Tabletv1Component } from './components/tabletv1/tabletv1.component';
 import { Tabletv2Component } from './components/tabletv2/tabletv2.component';
 import { Datosv2Component } from './components/datosv2/datosv2.component';
+import { Datosv3Component } from './components/datosv3/datosv3.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Datosv2Component } from './components/datosv2/datosv2.component';
     Error404Component,
     Tabletv1Component,
     Tabletv2Component,
-    Datosv2Component
+    Datosv2Component,
+    Datosv3Component
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, routing

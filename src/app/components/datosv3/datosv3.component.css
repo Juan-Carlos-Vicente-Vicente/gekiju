@@ -1,0 +1,51 @@
+.c2 {
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.c2 .word {
+  display: inline-block;
+  line-height: 1em;
+}
+div {
+  height: auto;
+  width: min-content + 20px;
+  margin: 5px;
+}
+
+tr {
+  text-align: center;
+}
+
+.bordecelda {
+  border: 2px solid blue;
+}
+
+.bordeceldalados {
+  border-left: 2px solid blue;
+  border-right: 2px solid blue;
+}
+
+.espaciodivs {
+  height: 100px;
+}
+
+.azulsuave {
+  background-color: rgba(55, 162, 189, 0.74);
+  height: auto;
+  margin: 5px;
+}
+
+.darkgreen {
+  background-color: darkgreen;
+}
+
+.darkred {
+  background-color: darkred;
+}
+
+.blanco {
+  width: min-content;
+}
