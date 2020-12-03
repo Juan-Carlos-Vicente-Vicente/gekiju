@@ -1,0 +1,48 @@
+<h1>
+    <label>
+        Esto es una prueba:<br />
+        {{entrar.auth}}<br />
+        Fin de la prueba.
+
+    </label>
+</h1>
+
+<div class="container-fluid">
+    <div *ngFor="let usuario of usuarios">
+        <div class="parallax">
+            <div class="encajar">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th class="color">Nombre</th>
+                            <th class="color">Apellido</th>
+                            <th class="color">Genero</th>
+                            <th class="color">Fecha de nacimiento</th>
+                            <th class="color">Altura</th>
+                            <th class="color">Trabajo</th>
+                            <th class="color">Puesto de trabajo</th>
+                            <th class="color">Dinero en el banco</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bordecelda">{{usuario.identity.firstname}}</td>
+                            <td class="bordecelda">{{usuario.identity.secondname}}</td>
+                            <td class="bordecelda">
+                                {{usuario.identity.sex}}
+                            </td>
+                            <td class="bordecelda">{{usuario.identity.dateofbirth}}</td>
+                            <td class="bordecelda">{{usuario.identity.height}} cm</td>
+                            <td class="bordecelda">{{usuario.job}}</td>
+                            <td class="bordecelda">{{usuario.job_grade}}</td>
+                            <td class="bordecelda">{{usuario.bank_money}} €</td>
+                            <td><button class="btn-success">
+                                    Detalles
+                                </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

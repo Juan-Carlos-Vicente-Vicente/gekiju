@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .color {
+    color: mediumspringgreen;
+  }
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .color {
+    color: fuchsia;
+  }
+
+  .container {
+    max-width: 320px;
+    width: 100%;
+    margin: auto;
+    padding: 32px;
+  }
+
+  .container-fluid {
+    width: 100%;
+  }
+  .encajar {
+    width: 50%;
+    margin-left: 8rem;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .color {
+    color: gold;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  max-width: 720px;
+  width: 100%;
+  margin: auto;
+  padding: 32px;
+}
+
+.center {
+  text-align: center;
+}
+
+.parallax {
+  height: 250px;
+  background-image: url("./../../../assets/img/marcotabletvacio.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+.encajar {
+  width: 80%;
+  margin-left: 8rem;
+}
+
+.colocarhueco {
+  height: 100px;
+  background-color: blueviolet;
+}

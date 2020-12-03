@@ -40,8 +40,23 @@ export class SogetiService {
         });
     }
 
+    loginSogeti(): Observable<any> {
+        var request = "authenticate"
+        var header = new HttpHeaders().set("password", "sogetispain");
+        var header = new HttpHeaders().set("user", "S2VTournament");
+
+        return this._http.post(this.url + request, {
+            headers: header
+        });
+    }
+
     verUsuariosSogeti(): Observable<any> {
         var request = "users";
+        return this._http.get(this.urlOur + request);
+
+    }
+    verUsuariosPruebaSogeti(): Observable<any> {
+        var request = "usersprueba";
         return this._http.get(this.urlOur + request);
 
     }

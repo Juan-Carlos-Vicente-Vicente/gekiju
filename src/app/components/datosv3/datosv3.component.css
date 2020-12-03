@@ -49,3 +49,8 @@ tr {
 .blanco {
   width: min-content;
 }
+
+.colocartabla {
+  height: 100px;
+  background-color: blueviolet;
+}
